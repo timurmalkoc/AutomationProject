@@ -1,6 +1,8 @@
 package utils;
 
 import framework.HomePage;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.spi.LoggerContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -21,7 +23,6 @@ public class TestBase {
 
     public void setUp() throws MalformedURLException {
         ConfigsReader.readProperties(dataProperties);
-
         // local run
         String browser = ConfigsReader.getProperty("browser");
 

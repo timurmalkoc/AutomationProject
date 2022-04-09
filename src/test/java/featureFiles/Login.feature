@@ -8,7 +8,6 @@
       Then User login will be "<result>"
 
       Examples:
-        | username         | password | result |
-        | admin@gmail.com  | admin    | pass   |
-        | admin@gmail.com  | admin123 | fail   |
-        | random@gmail.com | random   | fail   |
+        | username  | password | result |
+        | admin     | admin    | pass   |
+        | timur     | timur123 | fail   |

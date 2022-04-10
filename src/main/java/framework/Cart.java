@@ -8,10 +8,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Cart {
-    WebDriver driver;
+    public WebDriver driver;
     By totalLocator = By.id("totalp");
     By fistItem = By.xpath("//tr/td[2]");
     By itemsPrices = By.xpath("//tr/td[3]");
+    By deleteLink = By.xpath("//a[text()='Delete']");
 
     public Cart(WebDriver driver) {
         this.driver = driver;
@@ -27,8 +28,18 @@ public class Cart {
 
     public String getTotalOfList(){
         List<WebElement> price = driver.findElements(itemsPrices);
+        System.out.println("items = ");
+        price.stream().map(i->i.getText()).collect(Collectors.toList()).forEach(System.out::println);
         String total = String.valueOf(price.stream().mapToInt(i-> Integer.parseInt(i.getText())).sum());
         System.out.println("total = "+ total);
         return total;
+    }
+
+    public int getTotalNumberOfItem(){
+        return driver.findElements(itemsPrices).size();
+    }
+
+    public void deleteItem(){
+        driver.findElement(deleteLink).click();
     }
 }

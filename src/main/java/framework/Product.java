@@ -24,7 +24,6 @@ public class Product {
     public void clickAddForMultiple(){
         driver.findElement(addCartBtn).click();
         WindowControl.acceptAlert(driver);
-        driver.findElement(cartLink).click();
         driver.findElement(homePage).click();
     }
 }

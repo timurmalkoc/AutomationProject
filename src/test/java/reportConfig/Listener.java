@@ -6,8 +6,10 @@ import com.aventstack.extentreports.Status;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import utils.TestBase;
+import utils.Utils;
 
-public class Listener implements ITestListener {
+public class Listener extends TestBase implements ITestListener {
     ExtentTest test;
     ExtentReports extentReports = ExtentReportsNG.getExtentReports();
     //Thread safe for parallel testing
@@ -19,6 +21,15 @@ public class Listener implements ITestListener {
         extentTest.set(test);
     }
 
+    @Override
+    public void onTestFailure(ITestResult result) {
+        extentTest.get().fail(result.getThrowable());
+        String methodName = result.getMethod().getMethodName();
+        String screenshot = Utils.takeScreenshot(methodName);
+        Log.error(methodName+ " = " +screenshot);
+        extentTest.get().addScreenCaptureFromPath(screenshot, methodName);
+        tearDown();
+    }
     @Override
     public void onTestSuccess(ITestResult result) {
         extentTest.get().log(Status.PASS,"Test Passed");

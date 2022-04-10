@@ -49,7 +49,7 @@ public class HomePage {
         return elements.get(0).getText();
     }
 
-    public Cart addMultipleItems(){
+    public Cart addMultipleItems() {
         Product product = new Product(driver);
         List<WebElement> elements;
         for (int i=0; i<=2; i++) {

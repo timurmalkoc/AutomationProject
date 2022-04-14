@@ -17,4 +17,19 @@ public class DBTest extends Examples {
     public void getActorMovies() throws SQLException {
         getActorMovies("100");
     }
+
+    @Test
+    public void wildCart() throws SQLException {
+        customer();
+    }
+
+    @Test
+    public void subQuery() throws SQLException {
+        actorNumberOfMovie(35);
+    }
+
+    @Test
+    public void grouping() throws SQLException {
+        groupByRating();
+    }
 }

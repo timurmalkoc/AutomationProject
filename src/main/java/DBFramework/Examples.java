@@ -53,6 +53,40 @@ public class Examples extends Connect{
     }
 
 
+    public void customer() throws SQLException {
+        resultSet = statement.executeQuery("SELECT first_name, email, active FROM customer WHERE REGEXP_LIKE(first_name,'^[ST]h') AND active=0");
+        String leftAlignFormat = "| %-10s | %-35s | %-2s |\n";
+        while (resultSet.next()){
+            System.out.printf(leftAlignFormat,  resultSet.getString("first_name"),
+                    resultSet.getString("email"),
+                    resultSet.getString("active"));
+        }
+
+    }
+
+    public void actorNumberOfMovie(int filter) throws SQLException {
+        resultSet = statement.executeQuery("SELECT first_name, last_name, (SELECT count(actor_id) FROM " +
+                "film_actor WHERE actor.actor_id=film_actor.actor_id) total FROM actor HAVING total > "+filter);
+
+        String leftAlignFormat = "| %-10s | %-10s | %-5s |\n";
+        while (resultSet.next()){
+            System.out.printf(leftAlignFormat,  resultSet.getString("first_name"),
+                    resultSet.getString("last_name"),
+                    resultSet.getString("Total"));
+        }
+    }
+
+
+    public void groupByRating() throws SQLException {
+        resultSet = statement.executeQuery("SELECT rating, count(title) FROM film GROUP BY rating");
+        String leftAlignFormat = "| %-10s | %-10s |\n";
+        while (resultSet.next()){
+            System.out.printf(leftAlignFormat,  resultSet.getString("rating"),
+                    resultSet.getString(2));
+        }
+
+
+    }
     @AfterClass
     public void disconnect() throws SQLException {
         tearDown();

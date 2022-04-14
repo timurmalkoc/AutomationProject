@@ -22,7 +22,9 @@ public class TestBase {
     public void setUp() throws MalformedURLException {
         ConfigsReader.readProperties(dataProperties);
         // local run
-        String browser = ConfigsReader.getProperty("browser");
+        // String browser = ConfigsReader.getProperty("browser");
+        // jenkins
+        String browser = System.getProperty("browser");
 
         if (browser.contains("chrome")) {
             if (browser.contains("remote")) {

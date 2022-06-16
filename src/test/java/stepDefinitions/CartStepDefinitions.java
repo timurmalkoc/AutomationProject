@@ -63,7 +63,7 @@ public class CartStepDefinitions extends TestBase {
     @Then("Item should be deleted")
     public void item_should_be_deleted() throws InterruptedException {
         Thread.sleep(500);
-        int expectedNumberOfItem = 1;
+        int expectedNumberOfItem = 0;
         Assert.assertEquals(expectedNumberOfItem,cart.getTotalNumberOfItem());
         tearDown();
     }

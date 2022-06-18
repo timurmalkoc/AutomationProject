@@ -1,7 +1,9 @@
 package API.pet;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class AddNewPet_Payload {
     public static AddNewPet addNewPet(){
@@ -27,6 +29,19 @@ public class AddNewPet_Payload {
         newPet.setTags(tagsList);
 
         return newPet;
+    }
+
+    public static Map<String,Object> addNewPetWrong(){
+        Map<String, Object> payload = new HashMap<>();
+        String[] category = new String[] {"1","name"};
+        payload.put("id",1234);
+        payload.put("category",category);
+        payload.put("name","dog");
+        String[] photoUrls = new String[] {"god.jpeg.com"};
+        payload.put("photoUrls",photoUrls);
+        String[] tags = new String[] {"id","name"};
+        payload.put("status","sold");
+        return payload;
     }
 
 }

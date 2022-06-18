@@ -88,7 +88,20 @@ public class APIStepDefinitions extends TestBaseAPI {
     }
     @Then("The API get invalid input status code {int}")
     public void the_api_get_invalid_input_status_code(int statusCode) {
-       // assertEquals(response.getStatusCode(), statusCode);
+       assertEquals(response.getStatusCode(), statusCode);
+    }
+
+    @Given("Add a new pet with addNewPetWrong Payload and {string} method and {string} API")
+    public void add_a_new_pet_with_add_new_pet_wrong_payload_and_method_and_api(String method, String API) throws JsonProcessingException {
+        APIResources api = APIResources.valueOf(API);
+        if (method.equals("POST")){
+            ObjectMapper objectMapper = new ObjectMapper();
+            String payload = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(AddNewPet_Payload.addNewPetWrong());
+            System.out.println(payload);
+
+            response = requestSpec.body(payload).when().post(api.getSource());
+            System.out.println(response.getStatusCode());
+        }
     }
 
 }

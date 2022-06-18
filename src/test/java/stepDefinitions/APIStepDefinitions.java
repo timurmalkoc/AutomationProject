@@ -8,12 +8,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.restassured.mapper.ObjectMapperSerializationContext;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 import static io.restassured.RestAssured.given;
 import static org.testng.Assert.*;
+import static utils.ConfigsReader.getProperty;
+
 import java.io.FileNotFoundException;
 
 public class APIStepDefinitions extends TestBaseAPI {
@@ -67,7 +68,7 @@ public class APIStepDefinitions extends TestBaseAPI {
 
     @Given("Authorization for the action")
     public void authorization_for_the_action() {
-        requestSpec = requestSpec.header("key","qwert");
+        requestSpec = requestSpec.header("key",getProperty("key"));
     }
 
     @Given("Add a new pet with addNewPet Payload and {string} method and {string} API")
@@ -79,7 +80,15 @@ public class APIStepDefinitions extends TestBaseAPI {
 
             response = requestSpec.body(payload).when().post(api.getSource());
         }
+    }
 
+    @Given("Authorization for the action with wrong credential")
+    public void authorization_for_the_action_with_wrong_credential() {
+        requestSpec = requestSpec.header("key",getProperty("invalidKey"));
+    }
+    @Then("The API get invalid input status code {int}")
+    public void the_api_get_invalid_input_status_code(int statusCode) {
+       // assertEquals(response.getStatusCode(), statusCode);
     }
 
 }

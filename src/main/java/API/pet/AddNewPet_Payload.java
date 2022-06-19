@@ -44,4 +44,29 @@ public class AddNewPet_Payload {
         return payload;
     }
 
+    public static AddNewPet updatePet(int id, String name){
+        AddNewPet newPet = new AddNewPet();
+        newPet.setId(id);
+
+        AddNewPet.Categories categories = new AddNewPet.Categories();
+        categories.setId(0);
+        categories.setName("string");
+        newPet.setCategory(categories);
+
+        newPet.setName(name);
+        List<String> photo = new ArrayList<>();
+        photo.add("https://depositphotos.com/10415184/stock-photo-golden-retriever-dog-sitting-on.html");
+        newPet.setPhotoUrls(photo);
+
+        AddNewPet.Tags tags = new AddNewPet.Tags();
+        tags.setId(0);
+        tags.setName("string");
+        newPet.setStatus("available");
+        List<AddNewPet.Tags> tagsList = new ArrayList<>();
+        tagsList.add(tags);
+        newPet.setTags(tagsList);
+
+        return newPet;
+    }
+
 }

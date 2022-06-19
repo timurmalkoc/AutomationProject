@@ -10,7 +10,9 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.testng.Assert;
 
+import static API.PayloadAsString.getPayloadAsString;
 import static io.restassured.RestAssured.given;
 import static org.testng.Assert.*;
 import static utils.ConfigsReaderAPI.getProperty;
@@ -53,11 +55,11 @@ public class APIStepDefinitions extends TestBaseAPI {
 
     @When("Check the pet info with {string} method and {string} API and id = {string}")
     public void check_the_pet_info_with_method_and_api_and_id(String method, String API, String id) {
+
         APIResources api = APIResources.valueOf(API);
 
             if (method.equals("GET")){
                 response = requestSpec.when().get(api.getSource()+id);
-
         }
     }
 
@@ -73,13 +75,7 @@ public class APIStepDefinitions extends TestBaseAPI {
 
     @Given("Add a new pet with addNewPet Payload and {string} method and {string} API")
     public void add_a_new_pet_with_add_new_pet_payload_and_method_and_api(String method, String API) throws JsonProcessingException {
-        APIResources api = APIResources.valueOf(API);
-        if (method.equals("POST")){
-            ObjectMapper objectMapper = new ObjectMapper();
-            String payload = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(AddNewPet_Payload.addNewPet());
-
-            response = requestSpec.body(payload).when().post(api.getSource());
-        }
+        addOrUpdate(method, API, AddNewPet_Payload.addNewPet());
     }
 
     @Given("Authorization for the action with wrong credential")
@@ -93,15 +89,34 @@ public class APIStepDefinitions extends TestBaseAPI {
 
     @Given("Add a new pet with addNewPetWrong Payload and {string} method and {string} API")
     public void add_a_new_pet_with_add_new_pet_wrong_payload_and_method_and_api(String method, String API) throws JsonProcessingException {
-        APIResources api = APIResources.valueOf(API);
-        if (method.equals("POST")){
-            ObjectMapper objectMapper = new ObjectMapper();
-            String payload = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(AddNewPet_Payload.addNewPetWrong());
-            System.out.println(payload);
-
-            response = requestSpec.body(payload).when().post(api.getSource());
-            System.out.println(response.getStatusCode());
-        }
+        addOrUpdate(method, API, AddNewPet_Payload.addNewPetWrong());
     }
+
+    @When("update a existing pet with addNewPet Payload and {string} method and {string} API")
+    public void update_a_existing_pet_with_add_new_pet_payload_and_method_and_api(String method, String API) throws JsonProcessingException {
+        addOrUpdate(method, API, AddNewPet_Payload.addNewPetWrong());
+    }
+
+    @When("update a existing pet id={int} with addNewPet Payload name {string} and {string} method and {string} API")
+    public void update_a_existing_pet_id_with_add_new_pet_payload_name_and_method_and_api(int id, String name, String method, String API) throws JsonProcessingException {
+        addOrUpdate(method, API, AddNewPet_Payload.updatePet(id, name));
+        System.out.println(getKeyValue(response,"name"));
+    }
+
+    @Then("Get updated name must be {string}")
+    public void get_updated_name_must_be(String expectedName) {
+        Assert.assertEquals(getKeyValue(response,"name"),expectedName);
+    }
+
+    private void addOrUpdate(String method, String API, Object json) throws JsonProcessingException {
+        APIResources api = APIResources.valueOf(API);
+        String payload = getPayloadAsString(json);
+        if (method.equals("POST"))
+            response = requestSpec.body(payload).when().post(api.getSource());
+        else if (method.equals("PUT"))
+            response = requestSpec.body(payload).when().put(api.getSource());
+        else response =null;
+    }
+
 
 }

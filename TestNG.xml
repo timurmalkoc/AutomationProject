@@ -5,7 +5,7 @@
         <listener class-name="reportConfig.Listener"/>
     </listeners>
 
-    <test name="Login test">
+    <test name="Testing">
         <classes>
             <class name="cucumberOptions.TestRunner"></class>
         </classes>

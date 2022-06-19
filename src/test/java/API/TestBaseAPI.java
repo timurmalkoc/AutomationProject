@@ -12,7 +12,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
 
-import static utils.ConfigsReader.*;
+import static utils.ConfigsReaderAPI.*;
 
 public class TestBaseAPI {
     private static final String API_FILE_DIRECTORY = "resources/API.properties";

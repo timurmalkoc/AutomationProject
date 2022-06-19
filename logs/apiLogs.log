@@ -1,0 +1,333 @@
+Request method:	GET
+Request URI:	https://api.github.com/
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Server: GitHub.com
+Date: Sun, 22 May 2022 02:40:52 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Cache-Control: private, max-age=60, s-maxage=60
+Vary: Accept, Authorization, Cookie, X-GitHub-OTP
+ETag: W/"3456dc93d3561672c98fb4204dbb419a47a80400f966132e2a1a757e5cd34392"
+X-OAuth-Scopes: repo
+X-Accepted-OAuth-Scopes: 
+github-authentication-token-expiration: 2022-08-20 02:27:23 UTC
+X-GitHub-Media-Type: github.v3; format=json
+X-RateLimit-Limit: 5000
+X-RateLimit-Remaining: 4985
+X-RateLimit-Reset: 1653190454
+X-RateLimit-Used: 15
+X-RateLimit-Resource: core
+Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Content-Security-Policy: default-src 'none'
+Vary: Accept-Encoding, Accept, X-Requested-With
+Content-Encoding: gzip
+X-GitHub-Request-Id: F379:2905:795A3C:19C8AE5:6289A2B3
+
+{
+    "current_user_url": "https://api.github.com/user",
+    "current_user_authorizations_html_url": "https://github.com/settings/connections/applications{/client_id}",
+    "authorizations_url": "https://api.github.com/authorizations",
+    "code_search_url": "https://api.github.com/search/code?q={query}{&page,per_page,sort,order}",
+    "commit_search_url": "https://api.github.com/search/commits?q={query}{&page,per_page,sort,order}",
+    "emails_url": "https://api.github.com/user/emails",
+    "emojis_url": "https://api.github.com/emojis",
+    "events_url": "https://api.github.com/events",
+    "feeds_url": "https://api.github.com/feeds",
+    "followers_url": "https://api.github.com/user/followers",
+    "following_url": "https://api.github.com/user/following{/target}",
+    "gists_url": "https://api.github.com/gists{/gist_id}",
+    "hub_url": "https://api.github.com/hub",
+    "issue_search_url": "https://api.github.com/search/issues?q={query}{&page,per_page,sort,order}",
+    "issues_url": "https://api.github.com/issues",
+    "keys_url": "https://api.github.com/user/keys",
+    "label_search_url": "https://api.github.com/search/labels?q={query}&repository_id={repository_id}{&page,per_page}",
+    "notifications_url": "https://api.github.com/notifications",
+    "organization_url": "https://api.github.com/orgs/{org}",
+    "organization_repositories_url": "https://api.github.com/orgs/{org}/repos{?type,page,per_page,sort}",
+    "organization_teams_url": "https://api.github.com/orgs/{org}/teams",
+    "public_gists_url": "https://api.github.com/gists/public",
+    "rate_limit_url": "https://api.github.com/rate_limit",
+    "repository_url": "https://api.github.com/repos/{owner}/{repo}",
+    "repository_search_url": "https://api.github.com/search/repositories?q={query}{&page,per_page,sort,order}",
+    "current_user_repositories_url": "https://api.github.com/user/repos{?type,page,per_page,sort}",
+    "starred_url": "https://api.github.com/user/starred{/owner}{/repo}",
+    "starred_gists_url": "https://api.github.com/gists/starred",
+    "topic_search_url": "https://api.github.com/search/topics?q={query}{&page,per_page}",
+    "user_url": "https://api.github.com/users/{user}",
+    "user_organizations_url": "https://api.github.com/user/orgs",
+    "user_repositories_url": "https://api.github.com/users/{user}/repos{?type,page,per_page,sort}",
+    "user_search_url": "https://api.github.com/search/users?q={query}{&page,per_page,sort,order}"
+}
+Request method:	GET
+Request URI:	https://api.github.com/user/repos
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Server: GitHub.com
+Date: Sun, 22 May 2022 02:40:52 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Cache-Control: private, max-age=60, s-maxage=60
+Vary: Accept, Authorization, Cookie, X-GitHub-OTP
+ETag: W/"920b0aa0408ed24e7b35bbb82c72fad69458fd930ac097f8742364e44d9d1a51"
+X-OAuth-Scopes: repo
+X-Accepted-OAuth-Scopes: 
+github-authentication-token-expiration: 2022-08-20 02:27:23 UTC
+X-GitHub-Media-Type: github.v3; format=json
+X-RateLimit-Limit: 5000
+X-RateLimit-Remaining: 4984
+X-RateLimit-Reset: 1653190454
+X-RateLimit-Used: 16
+X-RateLimit-Resource: core
+Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Content-Security-Policy: default-src 'none'
+Vary: Accept-Encoding, Accept, X-Requested-With
+Content-Encoding: gzip
+X-GitHub-Request-Id: F37A:7910:35440F:9BD344:6289A2B4
+
+[
+    {
+        "id": 494936751,
+        "node_id": "R_kgDOHYAirw",
+        "name": "firstRepo",
+        "full_name": "timursteel/firstRepo",
+        "private": false,
+        "owner": {
+            "login": "timursteel",
+            "id": 105999934,
+            "node_id": "U_kgDOBlFuPg",
+            "avatar_url": "https://avatars.githubusercontent.com/u/105999934?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/timursteel",
+            "html_url": "https://github.com/timursteel",
+            "followers_url": "https://api.github.com/users/timursteel/followers",
+            "following_url": "https://api.github.com/users/timursteel/following{/other_user}",
+            "gists_url": "https://api.github.com/users/timursteel/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/timursteel/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/timursteel/subscriptions",
+            "organizations_url": "https://api.github.com/users/timursteel/orgs",
+            "repos_url": "https://api.github.com/users/timursteel/repos",
+            "events_url": "https://api.github.com/users/timursteel/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/timursteel/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "html_url": "https://github.com/timursteel/firstRepo",
+        "description": null,
+        "fork": false,
+        "url": "https://api.github.com/repos/timursteel/firstRepo",
+        "forks_url": "https://api.github.com/repos/timursteel/firstRepo/forks",
+        "keys_url": "https://api.github.com/repos/timursteel/firstRepo/keys{/key_id}",
+        "collaborators_url": "https://api.github.com/repos/timursteel/firstRepo/collaborators{/collaborator}",
+        "teams_url": "https://api.github.com/repos/timursteel/firstRepo/teams",
+        "hooks_url": "https://api.github.com/repos/timursteel/firstRepo/hooks",
+        "issue_events_url": "https://api.github.com/repos/timursteel/firstRepo/issues/events{/number}",
+        "events_url": "https://api.github.com/repos/timursteel/firstRepo/events",
+        "assignees_url": "https://api.github.com/repos/timursteel/firstRepo/assignees{/user}",
+        "branches_url": "https://api.github.com/repos/timursteel/firstRepo/branches{/branch}",
+        "tags_url": "https://api.github.com/repos/timursteel/firstRepo/tags",
+        "blobs_url": "https://api.github.com/repos/timursteel/firstRepo/git/blobs{/sha}",
+        "git_tags_url": "https://api.github.com/repos/timursteel/firstRepo/git/tags{/sha}",
+        "git_refs_url": "https://api.github.com/repos/timursteel/firstRepo/git/refs{/sha}",
+        "trees_url": "https://api.github.com/repos/timursteel/firstRepo/git/trees{/sha}",
+        "statuses_url": "https://api.github.com/repos/timursteel/firstRepo/statuses/{sha}",
+        "languages_url": "https://api.github.com/repos/timursteel/firstRepo/languages",
+        "stargazers_url": "https://api.github.com/repos/timursteel/firstRepo/stargazers",
+        "contributors_url": "https://api.github.com/repos/timursteel/firstRepo/contributors",
+        "subscribers_url": "https://api.github.com/repos/timursteel/firstRepo/subscribers",
+        "subscription_url": "https://api.github.com/repos/timursteel/firstRepo/subscription",
+        "commits_url": "https://api.github.com/repos/timursteel/firstRepo/commits{/sha}",
+        "git_commits_url": "https://api.github.com/repos/timursteel/firstRepo/git/commits{/sha}",
+        "comments_url": "https://api.github.com/repos/timursteel/firstRepo/comments{/number}",
+        "issue_comment_url": "https://api.github.com/repos/timursteel/firstRepo/issues/comments{/number}",
+        "contents_url": "https://api.github.com/repos/timursteel/firstRepo/contents/{+path}",
+        "compare_url": "https://api.github.com/repos/timursteel/firstRepo/compare/{base}...{head}",
+        "merges_url": "https://api.github.com/repos/timursteel/firstRepo/merges",
+        "archive_url": "https://api.github.com/repos/timursteel/firstRepo/{archive_format}{/ref}",
+        "downloads_url": "https://api.github.com/repos/timursteel/firstRepo/downloads",
+        "issues_url": "https://api.github.com/repos/timursteel/firstRepo/issues{/number}",
+        "pulls_url": "https://api.github.com/repos/timursteel/firstRepo/pulls{/number}",
+        "milestones_url": "https://api.github.com/repos/timursteel/firstRepo/milestones{/number}",
+        "notifications_url": "https://api.github.com/repos/timursteel/firstRepo/notifications{?since,all,participating}",
+        "labels_url": "https://api.github.com/repos/timursteel/firstRepo/labels{/name}",
+        "releases_url": "https://api.github.com/repos/timursteel/firstRepo/releases{/id}",
+        "deployments_url": "https://api.github.com/repos/timursteel/firstRepo/deployments",
+        "created_at": "2022-05-22T02:02:11Z",
+        "updated_at": "2022-05-22T02:02:11Z",
+        "pushed_at": "2022-05-22T02:02:12Z",
+        "git_url": "git://github.com/timursteel/firstRepo.git",
+        "ssh_url": "git@github.com:timursteel/firstRepo.git",
+        "clone_url": "https://github.com/timursteel/firstRepo.git",
+        "svn_url": "https://github.com/timursteel/firstRepo",
+        "homepage": null,
+        "size": 0,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "language": null,
+        "has_issues": true,
+        "has_projects": true,
+        "has_downloads": true,
+        "has_wiki": true,
+        "has_pages": false,
+        "forks_count": 0,
+        "mirror_url": null,
+        "archived": false,
+        "disabled": false,
+        "open_issues_count": 0,
+        "license": null,
+        "allow_forking": true,
+        "is_template": false,
+        "topics": [
+            
+        ],
+        "visibility": "public",
+        "forks": 0,
+        "open_issues": 0,
+        "watchers": 0,
+        "default_branch": "main",
+        "permissions": {
+            "admin": true,
+            "maintain": true,
+            "push": true,
+            "triage": true,
+            "pull": true
+        }
+    },
+    {
+        "id": 494936820,
+        "node_id": "R_kgDOHYAi9A",
+        "name": "secondRepo",
+        "full_name": "timursteel/secondRepo",
+        "private": false,
+        "owner": {
+            "login": "timursteel",
+            "id": 105999934,
+            "node_id": "U_kgDOBlFuPg",
+            "avatar_url": "https://avatars.githubusercontent.com/u/105999934?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/timursteel",
+            "html_url": "https://github.com/timursteel",
+            "followers_url": "https://api.github.com/users/timursteel/followers",
+            "following_url": "https://api.github.com/users/timursteel/following{/other_user}",
+            "gists_url": "https://api.github.com/users/timursteel/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/timursteel/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/timursteel/subscriptions",
+            "organizations_url": "https://api.github.com/users/timursteel/orgs",
+            "repos_url": "https://api.github.com/users/timursteel/repos",
+            "events_url": "https://api.github.com/users/timursteel/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/timursteel/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "html_url": "https://github.com/timursteel/secondRepo",
+        "description": null,
+        "fork": false,
+        "url": "https://api.github.com/repos/timursteel/secondRepo",
+        "forks_url": "https://api.github.com/repos/timursteel/secondRepo/forks",
+        "keys_url": "https://api.github.com/repos/timursteel/secondRepo/keys{/key_id}",
+        "collaborators_url": "https://api.github.com/repos/timursteel/secondRepo/collaborators{/collaborator}",
+        "teams_url": "https://api.github.com/repos/timursteel/secondRepo/teams",
+        "hooks_url": "https://api.github.com/repos/timursteel/secondRepo/hooks",
+        "issue_events_url": "https://api.github.com/repos/timursteel/secondRepo/issues/events{/number}",
+        "events_url": "https://api.github.com/repos/timursteel/secondRepo/events",
+        "assignees_url": "https://api.github.com/repos/timursteel/secondRepo/assignees{/user}",
+        "branches_url": "https://api.github.com/repos/timursteel/secondRepo/branches{/branch}",
+        "tags_url": "https://api.github.com/repos/timursteel/secondRepo/tags",
+        "blobs_url": "https://api.github.com/repos/timursteel/secondRepo/git/blobs{/sha}",
+        "git_tags_url": "https://api.github.com/repos/timursteel/secondRepo/git/tags{/sha}",
+        "git_refs_url": "https://api.github.com/repos/timursteel/secondRepo/git/refs{/sha}",
+        "trees_url": "https://api.github.com/repos/timursteel/secondRepo/git/trees{/sha}",
+        "statuses_url": "https://api.github.com/repos/timursteel/secondRepo/statuses/{sha}",
+        "languages_url": "https://api.github.com/repos/timursteel/secondRepo/languages",
+        "stargazers_url": "https://api.github.com/repos/timursteel/secondRepo/stargazers",
+        "contributors_url": "https://api.github.com/repos/timursteel/secondRepo/contributors",
+        "subscribers_url": "https://api.github.com/repos/timursteel/secondRepo/subscribers",
+        "subscription_url": "https://api.github.com/repos/timursteel/secondRepo/subscription",
+        "commits_url": "https://api.github.com/repos/timursteel/secondRepo/commits{/sha}",
+        "git_commits_url": "https://api.github.com/repos/timursteel/secondRepo/git/commits{/sha}",
+        "comments_url": "https://api.github.com/repos/timursteel/secondRepo/comments{/number}",
+        "issue_comment_url": "https://api.github.com/repos/timursteel/secondRepo/issues/comments{/number}",
+        "contents_url": "https://api.github.com/repos/timursteel/secondRepo/contents/{+path}",
+        "compare_url": "https://api.github.com/repos/timursteel/secondRepo/compare/{base}...{head}",
+        "merges_url": "https://api.github.com/repos/timursteel/secondRepo/merges",
+        "archive_url": "https://api.github.com/repos/timursteel/secondRepo/{archive_format}{/ref}",
+        "downloads_url": "https://api.github.com/repos/timursteel/secondRepo/downloads",
+        "issues_url": "https://api.github.com/repos/timursteel/secondRepo/issues{/number}",
+        "pulls_url": "https://api.github.com/repos/timursteel/secondRepo/pulls{/number}",
+        "milestones_url": "https://api.github.com/repos/timursteel/secondRepo/milestones{/number}",
+        "notifications_url": "https://api.github.com/repos/timursteel/secondRepo/notifications{?since,all,participating}",
+        "labels_url": "https://api.github.com/repos/timursteel/secondRepo/labels{/name}",
+        "releases_url": "https://api.github.com/repos/timursteel/secondRepo/releases{/id}",
+        "deployments_url": "https://api.github.com/repos/timursteel/secondRepo/deployments",
+        "created_at": "2022-05-22T02:02:45Z",
+        "updated_at": "2022-05-22T02:02:45Z",
+        "pushed_at": "2022-05-22T02:02:45Z",
+        "git_url": "git://github.com/timursteel/secondRepo.git",
+        "ssh_url": "git@github.com:timursteel/secondRepo.git",
+        "clone_url": "https://github.com/timursteel/secondRepo.git",
+        "svn_url": "https://github.com/timursteel/secondRepo",
+        "homepage": null,
+        "size": 0,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "language": null,
+        "has_issues": true,
+        "has_projects": true,
+        "has_downloads": true,
+        "has_wiki": true,
+        "has_pages": false,
+        "forks_count": 0,
+        "mirror_url": null,
+        "archived": false,
+        "disabled": false,
+        "open_issues_count": 0,
+        "license": null,
+        "allow_forking": true,
+        "is_template": false,
+        "topics": [
+            
+        ],
+        "visibility": "public",
+        "forks": 0,
+        "open_issues": 0,
+        "watchers": 0,
+        "default_branch": "main",
+        "permissions": {
+            "admin": true,
+            "maintain": true,
+            "push": true,
+            "triage": true,
+            "pull": true
+        }
+    }
+]

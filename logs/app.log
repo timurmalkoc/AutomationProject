@@ -1,0 +1,55 @@
+[INFO ] 2022-06-16 13:56:34.589 [main] Log - connecting DB
+[INFO ] 2022-06-16 13:56:34.675 [main] Log - Adding a new actor
+[INFO ] 2022-06-16 13:56:34.693 [main] Log - Listing an Actor
+[INFO ] 2022-06-16 13:56:34.708 [main] Log - updateActor info
+[INFO ] 2022-06-16 13:56:34.711 [main] Log - Listing an Actor
+[INFO ] 2022-06-16 13:56:34.725 [main] Log - Delete an actor
+[INFO ] 2022-06-16 13:56:34.726 [main] Log - Checking deleted actor not exist in the actor table
+[ERROR] 2022-06-16 14:07:07.479 [TestNG-tests-1] Log - runScenario = screenshot/runScenario.png
+[INFO ] 2022-06-16 14:07:08.324 [TestNG-tests-1] Log - connecting DB
+[INFO ] 2022-06-16 14:07:08.355 [TestNG-tests-1] Log - Adding a new actor
+[INFO ] 2022-06-16 14:07:08.371 [TestNG-tests-1] Log - Listing an Actor
+[INFO ] 2022-06-16 14:07:08.371 [TestNG-tests-1] Log - updateActor info
+[INFO ] 2022-06-16 14:07:08.371 [TestNG-tests-1] Log - Listing an Actor
+[INFO ] 2022-06-16 14:07:08.387 [TestNG-tests-1] Log - Delete an actor
+[INFO ] 2022-06-16 14:07:08.387 [TestNG-tests-1] Log - Checking deleted actor not exist in the actor table
+[INFO ] 2022-06-16 14:07:12.178 [TestNG-tests-1] Log - Landing on home page
+[INFO ] 2022-06-16 14:07:12.440 [TestNG-tests-1] Log - Trying login in account
+[INFO ] 2022-06-16 14:07:14.784 [TestNG-tests-1] Log - Assertion test results
+[INFO ] 2022-06-16 14:07:19.124 [TestNG-tests-1] Log - Landing on home page
+[INFO ] 2022-06-16 14:07:19.381 [TestNG-tests-1] Log - Trying login in account
+[INFO ] 2022-06-16 14:07:20.186 [TestNG-tests-1] Log - Assertion test results
+[ERROR] 2022-06-16 14:22:51.827 [TestNG-tests-1] Log - runScenario = screenshot/runScenario.png
+[INFO ] 2022-06-16 14:22:52.809 [TestNG-tests-1] Log - connecting DB
+[INFO ] 2022-06-16 14:22:52.839 [TestNG-tests-1] Log - Adding a new actor
+[INFO ] 2022-06-16 14:22:52.870 [TestNG-tests-1] Log - Listing an Actor
+[INFO ] 2022-06-16 14:22:52.886 [TestNG-tests-1] Log - updateActor info
+[INFO ] 2022-06-16 14:22:52.893 [TestNG-tests-1] Log - Listing an Actor
+[INFO ] 2022-06-16 14:22:52.893 [TestNG-tests-1] Log - Delete an actor
+[INFO ] 2022-06-16 14:22:52.893 [TestNG-tests-1] Log - Checking deleted actor not exist in the actor table
+[INFO ] 2022-06-16 14:22:56.560 [TestNG-tests-1] Log - Landing on home page
+[INFO ] 2022-06-16 14:22:56.799 [TestNG-tests-1] Log - Trying login in account
+[INFO ] 2022-06-16 14:22:59.141 [TestNG-tests-1] Log - Assertion test results
+[INFO ] 2022-06-16 14:23:03.541 [TestNG-tests-1] Log - Landing on home page
+[INFO ] 2022-06-16 14:23:03.778 [TestNG-tests-1] Log - Trying login in account
+[INFO ] 2022-06-16 14:23:04.599 [TestNG-tests-1] Log - Assertion test results
+[INFO ] 2022-06-16 14:28:38.147 [TestNG-tests-1] Log - connecting DB
+[INFO ] 2022-06-16 14:28:38.178 [TestNG-tests-1] Log - Adding a new actor
+[INFO ] 2022-06-16 14:28:38.183 [TestNG-tests-1] Log - Listing an Actor
+[INFO ] 2022-06-16 14:28:38.199 [TestNG-tests-1] Log - updateActor info
+[INFO ] 2022-06-16 14:28:38.199 [TestNG-tests-1] Log - Listing an Actor
+[INFO ] 2022-06-16 14:28:38.287 [TestNG-tests-1] Log - Delete an actor
+[INFO ] 2022-06-16 14:28:38.287 [TestNG-tests-1] Log - Checking deleted actor not exist in the actor table
+[INFO ] 2022-06-16 14:28:42.025 [TestNG-tests-1] Log - Landing on home page
+[INFO ] 2022-06-16 14:28:42.283 [TestNG-tests-1] Log - Trying login in account
+[INFO ] 2022-06-16 14:28:44.613 [TestNG-tests-1] Log - Assertion test results
+[INFO ] 2022-06-16 14:28:48.953 [TestNG-tests-1] Log - Landing on home page
+[INFO ] 2022-06-16 14:28:49.202 [TestNG-tests-1] Log - Trying login in account
+[INFO ] 2022-06-16 14:28:50.021 [TestNG-tests-1] Log - Assertion test results
+[INFO ] 2022-06-16 15:06:31.059 [main] Log - connecting DB
+[INFO ] 2022-06-16 15:06:31.097 [main] Log - Adding a new actor
+[INFO ] 2022-06-16 15:06:31.112 [main] Log - Listing an Actor
+[INFO ] 2022-06-16 15:06:31.112 [main] Log - updateActor info
+[INFO ] 2022-06-16 15:06:31.112 [main] Log - Listing an Actor
+[INFO ] 2022-06-16 15:06:31.128 [main] Log - Delete an actor
+[INFO ] 2022-06-16 15:06:31.128 [main] Log - Checking deleted actor not exist in the actor table

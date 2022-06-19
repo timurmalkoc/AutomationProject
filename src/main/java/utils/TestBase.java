@@ -24,7 +24,7 @@ public class TestBase {
         // local run
         // String browser = ConfigsReader.getProperty("browser");
         // jenkins
-        String browser = System.getProperty("browser");
+        String browser = System.getProperty("browser","firefox");
 
         if (browser.contains("chrome")) {
             if (browser.contains("remote")) {

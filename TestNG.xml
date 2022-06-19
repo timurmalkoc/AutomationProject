@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Practice Suite">
     <listeners>
-        <listener class-name="reportConfig.Listener"/>
+       <!-- <listener class-name="reportConfig.Listener"/> -->
     </listeners>
 
     <test name="Testing">

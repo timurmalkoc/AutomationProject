@@ -13,7 +13,7 @@ import io.restassured.specification.RequestSpecification;
 
 import static io.restassured.RestAssured.given;
 import static org.testng.Assert.*;
-import static utils.ConfigsReader.getProperty;
+import static utils.ConfigsReaderAPI.getProperty;
 
 import java.io.FileNotFoundException;
 

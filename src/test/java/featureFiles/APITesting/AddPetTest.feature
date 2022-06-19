@@ -1,3 +1,4 @@
+@API
 Feature: Checking add new feature
   @Pet @Regression @addNewPet
   Scenario: Adding a new pet with wrong credential

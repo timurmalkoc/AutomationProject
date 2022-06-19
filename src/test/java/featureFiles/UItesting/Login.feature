@@ -1,5 +1,5 @@
 #Author: Timur
-
+@UI
   Feature: Login
 
     Scenario Outline: User Login

@@ -1,5 +1,5 @@
 #Timur
-
+@DB
   Feature: Testing Actor table
 
     Scenario Outline: Checking Queries-Insert,Update,Delete,Select

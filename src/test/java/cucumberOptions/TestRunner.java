@@ -5,7 +5,8 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
         features = "src/test/java/featureFiles",
-        glue = {"stepDefinitions"}
+        glue = {"stepDefinitions"},
+        tags = ("@UI and @DB")
         )
 public class TestRunner extends AbstractTestNGCucumberTests {
 

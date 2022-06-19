@@ -1,3 +1,4 @@
+@UI
 Feature: Cart
 
   Scenario: adding single item in the cart

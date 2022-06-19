@@ -1,4 +1,4 @@
-
+@API
 Feature: Validating finds pets by status and id
   @findPetByStatus @pet @Regression
   Scenario Outline: Checking pets' status as available, pending, sold

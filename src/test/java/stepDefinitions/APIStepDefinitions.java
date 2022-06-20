@@ -53,8 +53,8 @@ public class APIStepDefinitions extends TestBaseAPI {
         }
     }
 
-    @When("Check the pet info with {string} method and {string} API and id = {string}")
-    public void check_the_pet_info_with_method_and_api_and_id(String method, String API, String id) {
+    @When("Check the pet info with {string} method and {string} API and id = {int}")
+    public void check_the_pet_info_with_method_and_api_and_id(String method, String API, int id) {
 
         APIResources api = APIResources.valueOf(API);
 
@@ -116,6 +116,11 @@ public class APIStepDefinitions extends TestBaseAPI {
         else if (method.equals("PUT"))
             response = requestSpec.body(payload).when().put(api.getSource());
         else response =null;
+    }
+
+    @When("Add multiple new pets with {string} method, {string} API, id= {int}, petName= {string}, status= {string}")
+    public void add_multiple_new_pets_with_method_api_id_pet_name_status(String method, String API, int id, String petName, String status) throws JsonProcessingException {
+        addOrUpdate(method, API, AddNewPet_Payload.addNewPet(id,petName,status));
     }
 
     @When("Delete an exiting pet with id= {int} {string} method and {string} API")

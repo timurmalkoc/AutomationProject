@@ -1,9 +1,7 @@
 package API.pet;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class AddNewPet_Payload {
     public static AddNewPet addNewPet(){
@@ -69,4 +67,29 @@ public class AddNewPet_Payload {
         return newPet;
     }
 
+    public static Map<String,Object> addNewPet(int id, String petName, String status) {
+        Map<String, Object> addPet = new LinkedHashMap<>();
+        addPet.put("id",id);
+        AddNewPet.Categories categories = addNewPet().getCategory();
+        categories.setId(1);
+        categories.setName("Animals");
+        addPet.put("category",categories);
+
+        addPet.put("name",petName);
+
+        List<String> urls = new ArrayList<>();
+        urls.add("www.example.com");
+        addPet.put("photoUrls",urls);
+
+        List<AddNewPet.Tags> tags = new ArrayList<>();
+        AddNewPet.Tags tag = new AddNewPet.Tags();
+        tag.setId(1);
+        tag.setName("cute doggies");
+        tags.add(tag);
+        addPet.put("tags",tags);
+
+        addPet.put("status",status);
+
+        return addPet;
+    }
 }

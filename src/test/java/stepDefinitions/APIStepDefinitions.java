@@ -118,5 +118,12 @@ public class APIStepDefinitions extends TestBaseAPI {
         else response =null;
     }
 
+    @When("Delete an exiting pet with id= {int} {string} method and {string} API")
+    public void delete_an_exiting_pet_with_id_method_and_api(int id, String method, String API) {
+        APIResources api = APIResources.valueOf(API);
 
+        if (method.equals("DELETE")){
+            response = requestSpec.when().delete(api.getSource()+id);
+        }
+    }
 }

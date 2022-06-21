@@ -30,13 +30,16 @@ public class TestBase {
             if (browser.contains("remote")) {
                 driver = new RemoteWebDriver(new URL(ConfigsReader.getProperty("remoteURL")), new ChromeOptions());
 
-            } else {
+            } else if (browser.contains("headless")) {
                 if (ConfigsReader.getProperty("browserOption").equalsIgnoreCase("headless")) {
                     ChromeOptions chromeOptions = new ChromeOptions();
                     chromeOptions.addArguments("headless");
+                    driver = new ChromeDriver();
                 }
+                else {
                 System.setProperty("webdriver.chrome.driver",ConfigsReader.getProperty("chrome"));
                 driver = new ChromeDriver();
+                }
             }
         }
         else if (browser.equalsIgnoreCase("firefox")) {

@@ -14,10 +14,7 @@ public class CartStepDefinitions extends TestBase {
     Product product;
     Cart cart;
     String firstItemPrice;
-    @Given("I lands on first page")
-    public void i_lands_on_first_page() throws MalformedURLException {
-        setUp();
-    }
+
     @When("I add first item on landing page")
     public void i_add_first_item_on_landing_page() throws InterruptedException {
         firstItemPrice = homePage.getFirstItemPrice();

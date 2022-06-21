@@ -4,7 +4,6 @@ import API.APIResources;
 import API.TestBaseAPI;
 import API.pet.AddNewPet_Payload;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

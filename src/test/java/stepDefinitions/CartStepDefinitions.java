@@ -15,11 +15,15 @@ public class CartStepDefinitions extends TestBase {
     Cart cart;
     String firstItemPrice;
 
+    @Given("I lands on home page")
+    public void i_lands_on_home_page() throws MalformedURLException {
+        setUp();
+    }
+
     @When("I add first item on landing page")
-    public void i_add_first_item_on_landing_page() throws InterruptedException {
+    public void i_add_first_item_on_landing_page() {
         firstItemPrice = homePage.getFirstItemPrice();
         product = homePage.clickFirstItem();
-        Thread.sleep(500);
         cart = product.clickAddBtn();
     }
     @Then("I should see it in the cart")
@@ -29,17 +33,11 @@ public class CartStepDefinitions extends TestBase {
     @Then("I should see price in my cart which matches on the item")
     public void i_should_see_price_in_my_cart_which_matches_on_the_item() {
         Assert.assertEquals(firstItemPrice.substring(1),cart.getTotal());
-        tearDown();
     }
 
-    @Given("I lands on home page")
-    public void i_lands_on_home_page() throws MalformedURLException {
-        setUp();
-    }
     @When("I add multiple items on landing page")
-    public void i_add_multiple_items_on_landing_page() throws InterruptedException {
+    public void i_add_multiple_items_on_landing_page() {
         cart = homePage.addMultipleItems();
-        Thread.sleep(500);
     }
     @Then("I should see them in the cart")
     public void i_should_see_them_in_the_cart() {
@@ -50,7 +48,6 @@ public class CartStepDefinitions extends TestBase {
     public void i_should_see_the_total_price_calculated_right() {
         System.out.println("get cart total= "+ cart.getTotal());
         Assert.assertEquals(cart.getTotal(),cart.getTotalOfList());
-        tearDown();
     }
 
     @When("I click delete link")
@@ -58,11 +55,33 @@ public class CartStepDefinitions extends TestBase {
         cart.deleteItem();
     }
     @Then("Item should be deleted")
-    public void item_should_be_deleted() throws InterruptedException {
-        Thread.sleep(500);
+    public void item_should_be_deleted() {
         int expectedNumberOfItem = 0;
         Assert.assertEquals(expectedNumberOfItem,cart.getTotalNumberOfItem());
+    }
+
+    @When("I refresh the page")
+    public void i_refresh_the_page() {
+        cart.refreshCartPage();
+    }
+
+    @Then("close browser")
+    public void close_browser() {
         tearDown();
+    }
+
+    @Then("I click place order btn")
+    public void i_click_place_order_btn() {
+        cart.clickPlaceOrder();
+    }
+    @When("I filled the purchase with name= {string}, country= {string}, city= {string}, credit cart= {string} month= {string}, year= {string}")
+    public void i_filled_the_purchase_with_name_country_city_credit_cart_month_year(String name, String country, String city, String card, String month, String year) {
+        cart.fillPurchaseForm(name,country,city,card, month, year);
+    }
+
+    @When("I get success message with {string}")
+    public void i_get_success_message_with(String expectedResult) {
+        Assert.assertEquals(cart.successMsg(),expectedResult);
     }
 
 }

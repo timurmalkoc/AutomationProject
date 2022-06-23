@@ -40,3 +40,11 @@ Background:
     And I filled the purchase with name= "Jhon Cooper", country= "USA", city= "FairFax", credit cart= "12345" month= "10", year= "25"
     And I get success message with "Thank you for your purchase!"
     And close browser
+
+  @Purchase
+  Scenario: Try to process to payment without adding any item in cart
+    When I click cart
+    And I click "Place Order Button"
+    # Then It should get an error message
+    # found bug in this scenario
+    And close browser

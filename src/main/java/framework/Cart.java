@@ -28,6 +28,7 @@ public class Cart {
     By yearBox = By.id("year");
     By purchaseBtn = By.xpath("//div[@class='modal-footer']/button[text()='Purchase']");
     By successMsg = By.xpath("//div[contains(@class,'alert')]/h2");
+    By placeOrderForm = By.xpath("//h5[@id='orderModalLabel']");
 
     public Cart(WebDriver driver) {
         this.driver = driver;
@@ -80,4 +81,13 @@ public class Cart {
         return driver.findElement(successMsg).getText();
     }
 
+    public void clickPlaceOrderBtn(){
+        driver.findElement(placeOrderBtn).click();
+    }
+
+    @SneakyThrows
+    public Boolean errorMessage(){
+        Thread.sleep(100);
+        return driver.findElement(placeOrderForm).isDisplayed();
+    }
 }

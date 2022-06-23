@@ -62,4 +62,8 @@ public class HomePage {
         driver.findElement(cartLink).click();
         return new Cart(driver);
    }
+   public Cart clickCart(){
+        driver.findElement(cartLink).click();
+        return new Cart(driver);
+   }
 }

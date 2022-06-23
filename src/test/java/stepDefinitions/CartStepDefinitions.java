@@ -84,4 +84,18 @@ public class CartStepDefinitions extends TestBase {
         Assert.assertEquals(cart.successMsg(),expectedResult);
     }
 
+    @When("I click cart")
+    public void i_click_cart() {
+        cart = homePage.clickCart();
+    }
+    @When("I click {string}")
+    public void i_click(String btn) {
+        if (btn.equals("Place Order Button")){
+            cart.clickPlaceOrderBtn();
+        }
+    }
+    @Then("It should get an error message")
+    public void it_should_get_an_error_message() {
+        Assert.assertFalse(cart.errorMessage());
+    }
 }

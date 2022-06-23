@@ -38,7 +38,10 @@ public class Cart {
         return driver.findElement(totalLocator).getText();
     }
 
+    @SneakyThrows
     public String getFirstItemInCart(){
+
+        Thread.sleep(500);
         return driver.findElement(fistItem).getText();
     }
 

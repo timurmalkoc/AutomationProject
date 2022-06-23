@@ -6,8 +6,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(
         features = "src/test/java/featureFiles",
         glue = {"stepDefinitions"},
-        plugin = {"json:target/cucumber-reports/cucumber.json"},
-        tags = "@Cart"
+        plugin = {"json:target/cucumber-reports/cucumber.json"}
         )
 public class TestRunner extends AbstractTestNGCucumberTests {
 
